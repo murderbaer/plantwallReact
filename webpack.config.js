@@ -29,11 +29,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
     static: {
       directory: path.join(__dirname, "build"),
     },
+    hot: true,
     port: 3000,
   }
 };
