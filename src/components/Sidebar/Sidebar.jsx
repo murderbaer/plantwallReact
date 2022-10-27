@@ -10,6 +10,11 @@ export default function Sidebar() {
             <SidebarButton title="Home" iconName="fa fa-home" onClick={() => alert('home')} />
             <SidebarButton
                 title="Diagramm"
+                iconName="fa fa-camera"
+                onClick={() => alert('diagramm')}
+            />
+            <SidebarButton
+                title="Diagramm"
                 iconName="fa fa-chart-area"
                 onClick={() => alert('diagramm')}
             />
