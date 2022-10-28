@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Camerafeed from '../../screen/Camerafeed/Camerafeed';
-import Home from '../../screen/Home/Home';
-import Statistics from '../../screen/Statistics/Statistics';
-import Settings from '../../screen/Settings/Settings';
+import Camerafeed from '../../screens/Camerafeed/Camerafeed';
+import Home from '../../screens/Home/Home';
+import Statistics from '../../screens/Statistics/Statistics';
+import Settings from '../../screens/Settings/Settings';
 import Sidebar from '../Sidebar/Sidebar';
 
 import styles from './styles.module.css';
