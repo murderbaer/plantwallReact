@@ -11,26 +11,26 @@ export default function Home() {
             <div className={classNames(styles.generalInfo, styles.box)}>
                 <div>
                     Temperature:
-                    {apiData.roomTemp}
                     {' '}
+                    {apiData.roomTemp}
                     °C
                 </div>
                 <div>
                     Humidity:
-                    {apiData.roomTemp}
                     {' '}
+                    {apiData.roomTemp}
                     %
                 </div>
                 <div>
                     Co2:
-                    {apiData.roomCo2}
                     {' '}
+                    {apiData.roomCo2}
                     %
                 </div>
                 <div>
                     O2:
-                    {apiData.roomO2}
                     {' '}
+                    {apiData.roomO2}
                     %
                 </div>
             </div>
