@@ -24,7 +24,9 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'build'),
+        publicPath: '/',
     },
+
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'public', 'index.html'),
@@ -34,6 +36,7 @@ module.exports = {
         static: {
             directory: path.join(__dirname, 'build'),
         },
+        historyApiFallback: true,
         port: 3000,
     },
 };

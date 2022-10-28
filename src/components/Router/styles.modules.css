@@ -1,8 +1,8 @@
 .app {
-    width: 100vw;
+    width: 92vw;
     height: 100vh;
     position: absolute;
     top: 0;
-    left: 0;
-    background: white;
+    left: 8vw;
+    background-color: black;
 }
