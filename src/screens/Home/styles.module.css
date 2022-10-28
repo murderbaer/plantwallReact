@@ -3,7 +3,6 @@
     gap: 50px;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    
     padding: 50px;
 }
 
@@ -15,14 +14,14 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 15vw;
+    height: 13vw;
 }
 
 .row {
     display: flex;
     gap: 50px;
     grid-column: 1/4;
-    height: 15vw;
+    height: 12vw;
     justify-items: stretch;
 }
 
