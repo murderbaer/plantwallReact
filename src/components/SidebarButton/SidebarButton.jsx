@@ -1,23 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import styles from './styles.modules.css';
 
 function SidebarButton(props) {
-    const { title, iconName, onClick } = props;
+    const { title, iconName, path } = props;
 
     return (
-        <button title={title} type="button" className={styles.sidebarButton} onClick={onClick}>
-            <span className={styles.button_icon}>
-                <i className={iconName} />
-            </span>
-        </button>
+        <Link to={path}>
+            <button title={title} type="button" className={styles.sidebarButton}>
+                <span className={styles.button_icon}>
+                    <i className={iconName} />
+                </span>
+            </button>
+        </Link>
     );
 }
 
 SidebarButton.propTypes = {
     title: PropTypes.string.isRequired,
     iconName: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
+    path: PropTypes.string.isRequired,
 };
 
 export default SidebarButton;

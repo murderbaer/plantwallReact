@@ -1,30 +1,28 @@
 import React from 'react';
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Camerafeed from '../../screen/Camerafeed/Camerafeed';
 import Home from '../../screen/Home/Home';
 import Statistics from '../../screen/Statistics/Statistics';
 import Settings from '../../screen/Settings/Settings';
+import Sidebar from '../Sidebar/Sidebar';
 
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Home />,
-    },
-    {
-        path: '/diagramm',
-        element: <Statistics />,
-    },
-    {
-        path: '/settings',
-        element: <Settings />,
-    },
-    {
-        path: '/camera',
-        element: <Camerafeed />,
-    },
-]);
+import styles from './styles.module.css';
 
 export default function Router() {
-    return <RouterProvider router={router} />;
+    return (
+        <BrowserRouter>
+            <div className={styles.sidebar}>
+                <Sidebar />
+            </div>
+            <div className={styles.content}>
+                <Routes>
+                    <Route path="/" exact element={<Home />} />
+                    <Route path="/diagramm" element={<Statistics />} />
+                    <Route path="/settings" element={<Settings />} />
+                    <Route path="/camera" element={<Camerafeed />} />
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
 }
