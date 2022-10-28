@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { useSelector } from 'react-redux';
+
 export default function Settings() {
-    return <h1>Settings</h1>;
+    const apiUrl = useSelector((state) => state.settings.apiUrl);
+    return <h1>{apiUrl}</h1>;
 }

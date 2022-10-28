@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const counterSlice = createSlice({
     name: 'settings',
     initialState: {
-        apiUrl: 'http://localhost:3001',
+        apiUrl: process.env.API_URL || 'http://localhost:3001',
     },
     reducers: {
         setApiUrl: (state, action) => {

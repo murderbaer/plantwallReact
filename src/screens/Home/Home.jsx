@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 export default function Home() {
     const apiData = useSelector((state) => state.apiData);
-
+    
     return (
         <div className={styles.home}>
             <div className={classNames(styles.generalInfo, styles.box)}>
