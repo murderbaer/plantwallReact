@@ -9,7 +9,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react'],
+    plugins: ['react', 'react-hooks'],
     rules: {
         // Indent with 4 spaces
         indent: ['error', 4],
@@ -19,6 +19,8 @@ module.exports = {
 
         // Indent props with 4 spaces
         'react/jsx-indent-props': ['error', 4],
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
         'no-param-reassign': ['error', { props: false }],
     },
 };

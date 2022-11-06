@@ -10,16 +10,16 @@ export const counterSlice = createSlice({
     },
     reducers: {
         setRoomCo2: (state, action) => {
-            state.roomCo2 = action.payload.roomCO2;
+            state.roomCo2 = action.payload.value;
         },
         setRoomO2: (state, action) => {
-            state.roomO2 = action.payload.roomO2;
+            state.roomO2 = action.payload.value;
         },
         setRoomTemp: (state, action) => {
-            state.roomTemp = action.payload.roomTemp;
+            state.roomTemp = action.payload.value;
         },
         setRoomHumidity: (state, action) => {
-            state.roomHumidity = action.payload.roomHumidity;
+            state.roomHumidity = action.payload.value;
         },
     },
 });
