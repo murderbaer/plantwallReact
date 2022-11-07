@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+import endpoints from '../../api/endpoints';
 
 export const counterSlice = createSlice({
     name: 'apiData',
@@ -29,4 +31,27 @@ export const {
     setRoomCo2, setRoomO2, setRoomTemp, setRoomHumidity,
 } = counterSlice.actions;
 
+export function getRoomTempFromApi() {
+    return async function fetchRoomTemperature(dispatch) {
+        try {
+            const response = await axios.get(endpoints.ROOM_TEMP);
+            const payload = { value: Number(response.data.temperature) };
+            dispatch(setRoomTemp(payload));
+        } catch (error) {
+            console.error(error);
+        }
+    };
+}
+
+export function getRoomHumidityFromApi() {
+    return async function fetchRoomHumidity(dispatch) {
+        try {
+            const response = await axios.get(endpoints.ROOM_HUMIDITY);
+            const payload = { value: Number(response.data.humidity) };
+            dispatch(setRoomTemp(payload));
+        } catch (error) {
+            console.error(error);
+        }
+    };
+}
 export default counterSlice.reducer;

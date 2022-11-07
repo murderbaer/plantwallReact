@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
-import { setRoomTemp } from '../../store/reducers/apiData';
+import {
+    setRoomTemp,
+    getRoomTempFromApi,
+    getRoomHumidityFromApi,
+} from '../../store/reducers/apiData';
 import styles from './styles.module.css';
 
 export default function Home() {
@@ -13,6 +17,15 @@ export default function Home() {
         const payload = { value: Number(value) };
         dispatch(setRoomTemp(payload));
     };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            dispatch(getRoomTempFromApi());
+            dispatch(getRoomHumidityFromApi());
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className={styles.home}>
