@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import styles from './styles.modules.css';
 
 function SidebarButton(props) {
-    const { title, iconName, path } = props;
+    const { title, Icon, path } = props;
 
     return (
         <Link to={path}>
             <button title={title} type="button" className={styles.sidebarButton}>
                 <span className={styles.button_icon}>
-                    <i className={iconName} />
+                    <Icon />
                 </span>
             </button>
         </Link>
@@ -19,7 +19,7 @@ function SidebarButton(props) {
 
 SidebarButton.propTypes = {
     title: PropTypes.string.isRequired,
-    iconName: PropTypes.string.isRequired,
+    Icon: PropTypes.element.isRequired,
     path: PropTypes.string.isRequired,
 };
 
