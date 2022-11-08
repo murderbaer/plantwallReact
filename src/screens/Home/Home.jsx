@@ -8,7 +8,7 @@ import {
     getRoomTempFromApi,
     getRoomHumidityFromApi,
 } from '../../store/reducers/apiData';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function Home() {
     const apiData = useSelector((state) => state.apiData);

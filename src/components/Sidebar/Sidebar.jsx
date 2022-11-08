@@ -6,7 +6,7 @@ import TimelineIcon from '@mui/icons-material/Timeline';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SidebarButton from '../SidebarButton/SidebarButton';
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function Sidebar() {
     return (

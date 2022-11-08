@@ -9,8 +9,15 @@ module.exports = {
         // exclude node_modules
         rules: [
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    'style-loader',
+                    // Translates CSS into CommonJS
+                    'css-loader',
+                    // Compiles Sass to CSS
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.(js|jsx)$/, // <-- added `|jsx` here

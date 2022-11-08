@@ -2,7 +2,7 @@ import React from 'react';
 import Webcam from 'react-webcam';
 import useWindowDimensions from '../../helpers/windowDimension';
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 function WebcamComponent() {
     const { height } = useWindowDimensions();

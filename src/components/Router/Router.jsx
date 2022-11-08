@@ -7,7 +7,7 @@ import Statistics from '../../screens/Statistics/Statistics';
 import Settings from '../../screens/Settings/Settings';
 import Sidebar from '../Sidebar/Sidebar';
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function Router() {
     return (
