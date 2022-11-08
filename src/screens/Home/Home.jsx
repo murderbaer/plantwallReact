@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
+import EggIcon from '@mui/icons-material/Egg';
 import {
     setRoomTemp,
     getRoomTempFromApi,
     getRoomHumidityFromApi,
 } from '../../store/reducers/apiData';
-import ThermostatIcon from '@mui/icons-material/Thermostat';
-import EggIcon from '@mui/icons-material/Egg';
 import styles from './styles.module.css';
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
         }, 2000);
 
         return () => clearInterval(interval);
-    }, []);
+    });
 
     return (
         <div className={styles.home}>
@@ -44,14 +44,12 @@ export default function Home() {
                     %
                 </div>
                 <div className={styles.element}>
-                   CO2
-                    {' '}
+                    CO2
                     {apiData.roomCo2}
                     %
                 </div>
                 <div>
                     O2
-                    {' '}
                     {apiData.roomO2}
                     %
                 </div>

@@ -1,9 +1,10 @@
 import React from 'react';
 
-import SidebarButton from '../SidebarButton/SidebarButton';
-
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';import TimelineIcon from '@mui/icons-material/Timeline';import SettingsIcon from '@mui/icons-material/Settings';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import TimelineIcon from '@mui/icons-material/Timeline';
+import SettingsIcon from '@mui/icons-material/Settings';
+import SidebarButton from '../SidebarButton/SidebarButton';
 import styles from './styles.module.css';
 
 export default function Sidebar() {

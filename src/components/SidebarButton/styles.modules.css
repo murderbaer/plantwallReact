@@ -10,13 +10,14 @@ Button {
     background: none;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: color 0.2s;
 }
 
+
 .button_icon {
-    color: #000;
+    color: #BDC0C9;
     font-size: 2rem;
     background: none;
+    filter: drop-shadow(0px 0px 10px #ece4e4);
 }
 
 .button_icon:hover {
