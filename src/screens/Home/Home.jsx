@@ -5,8 +5,8 @@ import ThermostatIcon from '@mui/icons-material/Thermostat';
 import EggIcon from '@mui/icons-material/Egg';
 import {
     setRoomTemp,
-    getRoomTempFromApi,
-    getRoomHumidityFromApi,
+    // getRoomTempFromApi,
+    // getRoomHumidityFromApi,
 } from '../../store/reducers/apiData';
 import styles from './styles.module.scss';
 
@@ -20,14 +20,14 @@ export default function Home() {
         dispatch(setRoomTemp(payload));
     };
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            dispatch(getRoomTempFromApi());
-            dispatch(getRoomHumidityFromApi());
-        }, 2000);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         dispatch(getRoomTempFromApi());
+    //         dispatch(getRoomHumidityFromApi());
+    //     }, 2000);
 
-        return () => clearInterval(interval);
-    });
+    //     return () => clearInterval(interval);
+    // });
 
     return (
         <div className={styles.home}>
@@ -72,10 +72,16 @@ export default function Home() {
                 </div>
             </div>
             <div className={styles.row}>
-                <div className={classNames(styles.left, styles.box, styles.element)}>
-                    <div>subside 1</div>
-                    <div>subside 2</div>
-                    <div>subside 3</div>
+                <div className={classNames(styles.left, styles.box, styles.boxWrapper)}>
+                    <div className={classNames(styles.boxTitle, styles.element)}>
+                        <ThermostatIcon />
+                        {' '}
+                        Temperature
+                    </div>
+                    <div className={styles.boxContent}>
+                        {apiData.roomTemp}
+                        °C
+                    </div>
                 </div>
                 <div className={classNames(styles.right, styles.box, styles.element)}>right</div>
             </div>

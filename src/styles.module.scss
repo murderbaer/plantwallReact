@@ -5,28 +5,26 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    background-color: rgba(24, 26, 37, 0.95);
+    background-color: rgba(24, 26, 37, 0.97);
     top: 0;
     left: 0;
     overflow: hidden;
 }
 
-body
-{
-    background: linear-gradient(-45deg, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+
+$bgWidth: 100000px;
+body {
+  background: linear-gradient(-11deg, #1e5799 0%,#2ce0bf  50%,#e02cbf 75%,#1e5799 100%); 
+  background-size: $bgWidth 100%;
+  animation: bg 15s linear infinite ;
 }
 
-
-@keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+@keyframes bg{
+  0%{
+    background-position-x: 0;
   }
+  
+  100%{
+    background-position-x: $bgWidth;
+  }
+}

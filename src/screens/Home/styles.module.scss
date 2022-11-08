@@ -1,6 +1,6 @@
 .home {
     display: grid;
-    gap: 50px;
+    gap: 30px;
     grid-template-columns: auto;
     grid-template-rows: auto;
     padding: 50px;
@@ -13,14 +13,14 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 13vw;
+    height: 13rem;
 }
 
 .row {
     display: flex;
     gap: 50px;
     grid-column: 1/4;
-    height: 12vw;
+    height: 12rem;
     justify-items: stretch;
 }
 
@@ -48,4 +48,27 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+
+.boxTitle {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.boxContent {
+    padding-left: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.boxWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
 }
