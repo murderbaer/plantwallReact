@@ -1,16 +1,16 @@
 .content {
     position: absolute;
     top: 0;
-    left: 5vw;
+    left: 5rem;
     width: 95vw;
     height: 100vh;
 }
 
 .sidebar
 {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 5vw;
+    width: 5rem;
     height: 100vh;
 }

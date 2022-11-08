@@ -7,56 +7,6 @@ import styles from './styles.module.scss';
 export default function App() {
     return (
         <div>
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
-            <div className="bubble" />
             <div className={styles.content}>
                 <Router />
             </div>
