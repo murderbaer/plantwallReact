@@ -6,6 +6,8 @@ import {
     getRoomTempFromApi,
     getRoomHumidityFromApi,
 } from '../../store/reducers/apiData';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
+import EggIcon from '@mui/icons-material/Egg';
 import styles from './styles.module.css';
 
 export default function Home() {
@@ -30,30 +32,32 @@ export default function Home() {
     return (
         <div className={styles.home}>
             <div className={classNames(styles.generalInfo, styles.box)}>
-                <div>
-                    Temperature:
+                <div className={styles.element}>
+                    <ThermostatIcon />
                     {' '}
                     {apiData.roomTemp}
                     °C
                 </div>
-                <div>
-                    Humidity:
+                <div className={styles.element}>
+                    <EggIcon />
                     {apiData.roomHumidity}
                     %
                 </div>
-                <div>
-                    Co2:
+                <div className={styles.element}>
+                   CO2
+                    {' '}
                     {apiData.roomCo2}
                     %
                 </div>
                 <div>
-                    O2:
+                    O2
+                    {' '}
                     {apiData.roomO2}
                     %
                 </div>
             </div>
             <div className={styles.row}>
-                <div className={classNames(styles.left, styles.box)}>
+                <div className={classNames(styles.left, styles.box, styles.element)}>
                     <input
                         type="range"
                         min="0"
@@ -64,18 +68,18 @@ export default function Home() {
                         id="myRange"
                     />
                 </div>
-                <div className={classNames(styles.right, styles.box)}>
+                <div className={classNames(styles.right, styles.box, styles.element)}>
                     <div>subside 1</div>
                     <div>subside 2</div>
                 </div>
             </div>
             <div className={styles.row}>
-                <div className={classNames(styles.left, styles.box)}>
+                <div className={classNames(styles.left, styles.box, styles.element)}>
                     <div>subside 1</div>
                     <div>subside 2</div>
                     <div>subside 3</div>
                 </div>
-                <div className={classNames(styles.right, styles.box)}>right</div>
+                <div className={classNames(styles.right, styles.box, styles.element)}>right</div>
             </div>
         </div>
     );
