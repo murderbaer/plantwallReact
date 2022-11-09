@@ -9,6 +9,7 @@ import {
     // getRoomHumidityFromApi,
 } from '../../store/reducers/apiData';
 import TextCard from '../../components/Cards/TextCard/TextCard';
+import RowCard from '../../components/Cards/RowCard/RowCard';
 import styles from './styles.module.scss';
 
 export default function Home() {
@@ -32,30 +33,12 @@ export default function Home() {
 
     return (
         <div className={styles.home}>
-            <div className={styles.row} >
+            <RowCard >
                 <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
                 <TextCard title="Humidity" text={apiData.roomHumidity + '%'} icon={<EggIcon />} />
-                <TextCard title="O2" text={apiData.roomO2 + '%'}  />
+                <TextCard title="O2" text={apiData.roomO2 + '%'} />
                 <TextCard title="CO2" text={apiData.roomCo2 + '%'} />
-            </div>
-            <div className={styles.row}>
-                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
-            </div>
-            <div className={styles.row}>
-                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
-            </div>
-            <div className={styles.row}>
-                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
-            </div>
-            <div className={styles.row}>
-                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
-            </div>
-            <div className={styles.row}>
-                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
-            </div>
-            <div className={styles.row}>
-                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
-            </div>
+            </RowCard>
         </div>
     );
 }
