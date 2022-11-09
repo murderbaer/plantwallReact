@@ -5,6 +5,7 @@ import EggIcon from '@mui/icons-material/Egg';
 import TextCard from '../../components/Cards/TextCard/TextCard';
 import RowCard from '../../components/Cards/RowCard/RowCard';
 import styles from './styles.module.scss';
+import ChartCard from '../../components/Cards/ChartCard/ChartCard';
 
 export default function Home() {
     const apiData = useSelector((state) => state.apiData);
@@ -21,6 +22,9 @@ export default function Home() {
                 <TextCard title="O2" text={apiData.roomO2 + '%'} />
                 <TextCard title="CO2" text={apiData.roomCo2 + '%'} />
                 <TextCard title="CO2" text={apiData.roomCo2 + '%'} />
+            </RowCard>
+            <RowCard >
+                <ChartCard />
             </RowCard>
         </div>
     );
