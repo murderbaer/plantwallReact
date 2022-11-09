@@ -8,6 +8,7 @@ import {
     // getRoomTempFromApi,
     // getRoomHumidityFromApi,
 } from '../../store/reducers/apiData';
+import TextCard from '../../components/Cards/TextCard/TextCard';
 import styles from './styles.module.scss';
 
 export default function Home() {
@@ -72,17 +73,7 @@ export default function Home() {
                 </div>
             </div>
             <div className={styles.row}>
-                <div className={classNames(styles.left, styles.box, styles.boxWrapper)}>
-                    <div className={classNames(styles.boxTitle, styles.element)}>
-                        <ThermostatIcon />
-                        {' '}
-                        Temperature
-                    </div>
-                    <div className={styles.boxContent}>
-                        {apiData.roomTemp}
-                        °C
-                    </div>
-                </div>
+                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
                 <div className={classNames(styles.right, styles.box, styles.element)}>right</div>
             </div>
         </div>

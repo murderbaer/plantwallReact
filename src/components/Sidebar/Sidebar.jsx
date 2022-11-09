@@ -11,8 +11,6 @@ import SidebarButton from '../SidebarButton/SidebarButton';
 import styles from './styles.module.scss';
 
 export default function Sidebar() {
-
-
     return (
         <div className={styles.sidebar}>
             <div className={styles.sidebarLogoContainer}>
