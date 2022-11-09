@@ -51,7 +51,10 @@ const options = {
     elements: {
         point:{
             radius: 0
-        }
+        },
+        line: {
+            tension: 0.4
+        },
     }
 };
 
@@ -63,14 +66,17 @@ export const data = {
         {
             label: 'Dataset 1',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+            fill: true,
             borderColor: 'rgba(255, 99, 132, 0.3)',
-            backgroundColor: 'transparent',
+            backgroundColor: 'pink',
+
         },
         {
             label: 'Dataset 2',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+            fill: true,
             borderColor: 'rgba(53, 162, 235, 0.3)',
-            backgroundColor: 'transparent',
+            backgroundColor: 'pink',
         },
     ],
 };
