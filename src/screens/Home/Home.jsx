@@ -26,6 +26,16 @@ export default function Home() {
             <RowCard >
                 <ChartCard />
             </RowCard>
+            <RowCard >
+                <ChartCard />
+            </RowCard>
+            <RowCard >
+                <ChartCard />
+                <ChartCard />
+            </RowCard>
+            <RowCard >
+                <ChartCard />
+            </RowCard>
         </div>
     );
 }
