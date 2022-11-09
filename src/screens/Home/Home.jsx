@@ -38,6 +38,10 @@ export default function Home() {
                 <TextCard title="Humidity" text={apiData.roomHumidity + '%'} icon={<EggIcon />} />
                 <TextCard title="O2" text={apiData.roomO2 + '%'} />
                 <TextCard title="CO2" text={apiData.roomCo2 + '%'} />
+            </RowCard> 
+            <RowCard >
+                <TextCard title="O2" text={apiData.roomO2 + '%'} />
+                <TextCard title="CO2" text={apiData.roomCo2 + '%'} />
             </RowCard>
         </div>
     );
