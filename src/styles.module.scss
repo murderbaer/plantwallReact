@@ -11,11 +11,11 @@
 }
 
 
-$bgWidth: 1000vw;
+$bgWidth: 10000vw;
 body {
   background: linear-gradient(50deg, #1e5799 0%,#2ce0bf  50%,#e02cbf 75%,#1e5799 100%); 
-  background-size: $bgWidth 100%;
-  animation: bg 10s linear infinite;
+  background-size: $bgWidth 10%;
+  animation: bg 15s linear infinite;
   overflow: hidden;
 }
 
