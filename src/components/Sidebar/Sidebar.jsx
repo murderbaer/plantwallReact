@@ -4,7 +4,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import TimelineIcon from '@mui/icons-material/Timeline';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { ForestOutlined } from '@mui/icons-material';
+import { GrassOutlined } from '@mui/icons-material';
 import SidebarButton from '../SidebarButton/SidebarButton';
 
 
@@ -20,7 +20,7 @@ export default function Sidebar() {
                         <stop offset={1} stopColor="#5860E3" />
                     </linearGradient>
                 </svg>
-                <ForestOutlined sx={{ fill: "url(#linearColors)" }} className={styles.sidebarLogo} />
+                <GrassOutlined sx={{ fill: "url(#linearColors)" }} className={styles.sidebarLogo} />
             </div>
             <div className={styles.sidebarButtons}>
             <SidebarButton title="Home" Icon={DashboardIcon} path="/" />

@@ -15,7 +15,7 @@ $bgWidth: 1000vw;
 body {
   background: linear-gradient(50deg, #1e5799 0%,#2ce0bf  50%,#e02cbf 75%,#1e5799 100%); 
   background-size: $bgWidth 100%;
-  animation: bg 10s linear infinite ;
+  animation: bg 10s linear infinite;
   overflow: hidden;
 }
 

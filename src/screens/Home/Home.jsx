@@ -32,49 +32,27 @@ export default function Home() {
 
     return (
         <div className={styles.home}>
-            <div className={classNames(styles.generalInfo, styles.box)}>
-                <div className={styles.element}>
-                    <ThermostatIcon />
-                    {' '}
-                    {apiData.roomTemp}
-                    °C
-                </div>
-                <div className={styles.element}>
-                    <EggIcon />
-                    {apiData.roomHumidity}
-                    %
-                </div>
-                <div className={styles.element}>
-                    CO2
-                    {apiData.roomCo2}
-                    %
-                </div>
-                <div>
-                    O2
-                    {apiData.roomO2}
-                    %
-                </div>
-            </div>
-            <div className={styles.row}>
-                <div className={classNames(styles.left, styles.box, styles.element)}>
-                    <input
-                        type="range"
-                        min="0"
-                        max="100"
-                        value={apiData.roomTemp}
-                        onChange={onSliderChange}
-                        className={styles.slider}
-                        id="myRange"
-                    />
-                </div>
-                <div className={classNames(styles.right, styles.box, styles.element)}>
-                    <div>subside 1</div>
-                    <div>subside 2</div>
-                </div>
+            <div className={styles.row} >
+                <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
+                <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
             </div>
             <div className={styles.row}>
                    <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
-                <div className={classNames(styles.right, styles.box, styles.element)}>right</div>
+            </div>
+            <div className={styles.row}>
+                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
+            </div>
+            <div className={styles.row}>
+                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
+            </div>
+            <div className={styles.row}>
+                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
+            </div>
+            <div className={styles.row}>
+                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
+            </div>
+            <div className={styles.row}>
+                   <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} />
             </div>
         </div>
     );
