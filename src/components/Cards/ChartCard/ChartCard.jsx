@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -53,32 +53,52 @@ const options = {
 
 const labels = Array.from({ length: 10 }, (_, i) => i + 1);
 
-export default function ChartCard() {
+export default function ChartCard({
+    title, text, icon, onClick,
+}) {
     const data = {
         labels,
         datasets: [
             {
                 label: 'Dataset 1',
-                data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+                data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
                 fill: true,
-                borderColor: 'rgba(255, 99, 132, 0.3)',
+                borderColor: 'rgba(255, 99, 132, 0.4)',
                 backgroundColor: 'pink',
             },
             {
                 label: 'Dataset 2',
-                data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+                data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
                 fill: true,
-                borderColor: 'rgba(53, 162, 235, 0.3)',
+                borderColor: 'rgba(53, 162, 235, 0.4)',
                 backgroundColor: 'pink',
             },
         ],
     };
     return (
-        <div className={classNames(styles.boxWrapper)}>
-            <div className={classNames(styles.boxTitle)}>Chart</div>
+        <div className={styles.boxWrapper} onClick={onClick}>
+            <div className={styles.boxText}>
+                <div className={styles.boxTitle}>
+                    {icon}
+                    {title}
+                </div>
+                <div className={styles.boxData}>{text}</div>
+            </div>
             <div className={styles.chart}>
                 <Line data={data} options={options} />
             </div>
         </div>
     );
 }
+
+ChartCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    icon: PropTypes.object,
+    onClick: PropTypes.func,
+};
+
+ChartCard.defaultProps = {
+    icon: null,
+    onClick: () => {},
+};

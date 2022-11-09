@@ -1,6 +1,5 @@
 .boxTitle {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
     font-weight: 400;
@@ -24,7 +23,6 @@
     background-color: #171822;
     border: 1px solid #303241;
     border-radius: 17px;
-    
     cursor: default;
     user-select: none;
 }

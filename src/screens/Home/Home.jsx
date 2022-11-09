@@ -13,6 +13,17 @@ export default function Home() {
     return (
         <div className={styles.home}>
             <RowCard>
+                <ChartCard
+                    title="Temperature"
+                    text={`${apiData.roomTemp}°C`}
+                    icon={<ThermostatIcon />}
+                    onClick={() => console.log('test')}
+                />
+                <ChartCard title="Humidity" text={`${apiData.roomHumidity}%`} icon={<EggIcon />} />
+                <ChartCard title="O2" text={`${apiData.roomO2}%`} />
+                <ChartCard title="CO2" text={`${apiData.roomCo2}%`} />
+            </RowCard>
+            <RowCard>
                 <TextCard
                     title="Temperature"
                     text={`${apiData.roomTemp}°C`}
@@ -27,19 +38,6 @@ export default function Home() {
                 <TextCard title="O2" text={`${apiData.roomO2}%`} />
                 <TextCard title="CO2" text={`${apiData.roomCo2}%`} />
                 <TextCard title="CO2" text={`${apiData.roomCo2}%`} />
-            </RowCard>
-            <RowCard>
-                <ChartCard />
-            </RowCard>
-            <RowCard>
-                <ChartCard />
-            </RowCard>
-            <RowCard>
-                <ChartCard />
-                <ChartCard />
-            </RowCard>
-            <RowCard>
-                <ChartCard />
             </RowCard>
         </div>
     );
