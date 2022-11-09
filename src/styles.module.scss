@@ -8,7 +8,6 @@
     background-color: rgba(24, 26, 37, 0.97);
     top: 0;
     left: 0;
-    overflow: hidden;
 }
 
 
@@ -17,6 +16,7 @@ body {
   background: linear-gradient(-11deg, #1e5799 0%,#2ce0bf  50%,#e02cbf 75%,#1e5799 100%); 
   background-size: $bgWidth 100%;
   animation: bg 15s linear infinite ;
+  overflow: hidden;
 }
 
 @keyframes bg{
