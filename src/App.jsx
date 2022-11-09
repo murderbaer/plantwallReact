@@ -1,6 +1,5 @@
 import React from 'react';
 import Router from './components/Router/Router';
-import '@fontsource/roboto'; // Defaults to weight 400.
 
 import styles from './styles.module.scss';
 
