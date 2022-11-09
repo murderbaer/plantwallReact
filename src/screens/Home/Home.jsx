@@ -12,28 +12,33 @@ export default function Home() {
 
     return (
         <div className={styles.home}>
-            <RowCard >
-                <TextCard title="Temperature" text={apiData.roomTemp + '°C'} icon={<ThermostatIcon />} onClick={() => alert('test')}/>
-                <TextCard title="Humidity" text={apiData.roomHumidity + '%'} icon={<EggIcon />} />
-                <TextCard title="O2" text={apiData.roomO2 + '%'} />
-                <TextCard title="CO2" text={apiData.roomCo2 + '%'} />
-            </RowCard> 
-            <RowCard >
-                <TextCard title="O2" text={apiData.roomO2 + '%'} />
-                <TextCard title="CO2" text={apiData.roomCo2 + '%'} />
-                <TextCard title="CO2" text={apiData.roomCo2 + '%'} />
+            <RowCard>
+                <TextCard
+                    title="Temperature"
+                    text={`${apiData.roomTemp}°C`}
+                    icon={<ThermostatIcon />}
+                    onClick={() => console.log('test')}
+                />
+                <TextCard title="Humidity" text={`${apiData.roomHumidity}%`} icon={<EggIcon />} />
+                <TextCard title="O2" text={`${apiData.roomO2}%`} />
+                <TextCard title="CO2" text={`${apiData.roomCo2}%`} />
             </RowCard>
-            <RowCard >
+            <RowCard>
+                <TextCard title="O2" text={`${apiData.roomO2}%`} />
+                <TextCard title="CO2" text={`${apiData.roomCo2}%`} />
+                <TextCard title="CO2" text={`${apiData.roomCo2}%`} />
+            </RowCard>
+            <RowCard>
                 <ChartCard />
             </RowCard>
-            <RowCard >
+            <RowCard>
                 <ChartCard />
             </RowCard>
-            <RowCard >
+            <RowCard>
                 <ChartCard />
                 <ChartCard />
             </RowCard>
-            <RowCard >
+            <RowCard>
                 <ChartCard />
             </RowCard>
         </div>

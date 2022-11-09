@@ -6,6 +6,12 @@
     width: 94%;
     height: 94%;
     color: white;
-    overflow: scroll;
+    overflow-y: scroll;
     padding: 3%;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
+
+.home::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
