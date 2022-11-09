@@ -12,6 +12,7 @@ function SidebarButton(props) {
     }
 
     return (
+        <div>
         <Link to={path}>
             <button title={title} type="button" className={styles.sidebarButton}>
                 {activeIndicator}
@@ -20,6 +21,7 @@ function SidebarButton(props) {
                 </span>
             </button>
         </Link>
+        </div>
     );
 }
 
